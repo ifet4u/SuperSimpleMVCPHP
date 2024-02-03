@@ -1,0 +1,1 @@
+php -S localhost:9090 -t c:/web/vezba/public/
