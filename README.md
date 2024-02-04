@@ -1,5 +1,5 @@
 # Super Simple MVC PHP Script
-Simple MVC starting point PHP 7.4 and UP
+Simple MVC starting point for small PHP projects
 
 If you are learning or familliar with PHP and MVC architecture, this is a good starting point for smaller projects. 
 There are few things to know:
