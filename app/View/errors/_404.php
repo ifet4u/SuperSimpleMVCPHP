@@ -1,67 +1,50 @@
-<!-- Simple 404 Page using HTML & CSS -->
-<!-- Author: Godnon Dsilva -->
-
-<!-- HTML5 -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Enter your title of the page -->
-    <title>404</title>
-    <!-- Link the CSS posted below to this page, change the href -->
-    <style type="text/css">
-    	/* Imported fonts */
-@import url('https://fonts.googleapis.com/css?family=Anton');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-/* CSS */
-body {
-  background-color: #222;
-  font-family: 'Anton',  sans-serif;
-  margin: 0;
-}
-
-
-body > main > center > p {
-  color: #ddd;
-  font-family: 'Open Sans'. sans-serif !important;
-}
-
-body > main > center > h1 {
-  text-transform: uppercase;
-  color: #0077ff;
-  font-size: 48px;
-}
-
-body > main > center > h3 > a {
-  text-transform: uppercase;
-  font-size: 18px;
-  color: #000;
-  background-color: #0077ff;
-  text-decoration: none;
-  padding: 1px 5px;
-  border: 1px solid #0077ff;
-  border-radius: 5px;
-}
-    </style>
-    <base href=""> <!-- Enter your website URL here -->
-
-    <!-- Just some important metas, you can ignore these -->
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- If you want to learn more about them then visit https://www.w3schools.com/tags/tag_meta.asp -->
-  </head>
-  <body>
-    <main>
-      <center>
-        <br /><br /><br /><br /><br /><br />
-  			<h1>404 - no need to explain!</h1>
-  			<p> <?= $msg ?> <br><br>
-                  • Check your URI<br />
-                  • Check Class names<br />
-                  • Check again<br /><br /><br /></p>
-        <h3><a href="/">Go home !</a></h3>
-        <br /><br /><br /><br />
-      </center>
-    </main>
-  </body>
+    <title><?= APPNAME ?></title>
+    <!-- Bulma CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Dodajemo boju pozadine */
+        }
+        .section {
+            background-color: #fff; /* Dodajemo boju sekciji */
+            border-radius: 8px; /* Dodajemo zaobljeni ivičnjak sekciji */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dodajemo senku sekciji */
+            padding: 20px; /* Dodajemo razmak unutar sekcije */
+            margin: 50px auto; /* Centriramo sekciju */
+            max-width: 600px; /* Postavljamo maksimalnu širinu sekcije */
+            text-align: center; /* Centriramo tekst unutar sekcije */
+        }
+        h1 {
+            color: #ff3860; /* Dodajemo boju naslovu */
+        }
+        p {
+            color: #333; /* Dodajemo boju paragrafu */
+        }
+        a {
+            color: #3273dc; /* Dodajemo boju linku */
+        }
+        a:hover {
+            text-decoration: underline; /* Dodajemo podvlačenje na hover linka */
+        }
+    </style>
+</head>
+<body>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">404 - no need to explain!</h1>
+        <p> <?= $msg ?> <br><br>
+            • Check your URL<br />
+            • Check Class names<br />
+            • Check again<br /><br /><br /></p>
+        <h3><a href="/">Go to homepage </a></h3>
+    </div>
+</section>
+
+</body>
 </html>
