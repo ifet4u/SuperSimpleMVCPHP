@@ -76,5 +76,6 @@ Class Company extends App
    {
 	$model = new CompanyModel;
 	$data = $model->companies();
-  
+  	view('company',['data' => $data]);
 
+```
