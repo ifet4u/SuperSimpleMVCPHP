@@ -19,13 +19,13 @@ There are few things to know:
   
   **app/fn.php** contains basic functions :
   
-                                  * **view()**  - rendering php page
+                                  * **view()** 	     - rendering php page
                                   
-                                  * **dd()**    - dump vars/strings/etc for debuging
+                                  * **dd()**  	     - dump vars/strings/etc for debuging
 
-                                  * **callModel()**    - loads model in Controller
+                                  * **callModel()**  - loads model in Controller
                                   
-                                  * **rr()**    - redirects
+                                  * **rr()**  	     - redirects
                                   
   You can add your own functions in this file, it's included in rest of the App
   
