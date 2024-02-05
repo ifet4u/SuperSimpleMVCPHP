@@ -7,29 +7,31 @@
     <!-- Bulma CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <style>
-        body {
-            background-color: #f0f0f0; /* Dodajemo boju pozadine */
-        }
+        
         .section {
-            background-color: #fff; /* Dodajemo boju sekciji */
-            border-radius: 8px; /* Dodajemo zaobljeni ivičnjak sekciji */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dodajemo senku sekciji */
-            padding: 20px; /* Dodajemo razmak unutar sekcije */
-            margin: 50px auto; /* Centriramo sekciju */
-            max-width: 600px; /* Postavljamo maksimalnu širinu sekcije */
-            text-align: center; /* Centriramo tekst unutar sekcije */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 600px;
+            text-align: center;
         }
         h1 {
-            color: #ff3860; /* Dodajemo boju naslovu */
+            color: #ff3860;
+            font-size: 2.5em; /* Povećava veličinu naslova */
+            margin-bottom: 20px; /* Dodajemo razmak ispod naslova */
         }
         p {
-            color: #333; /* Dodajemo boju paragrafu */
+            color: #333;
+            font-size: 1.2em; /* Povećava veličinu paragrafa */
+            margin-bottom: 30px; /* Dodajemo razmak ispod paragrafa */
         }
         a {
-            color: #3273dc; /* Dodajemo boju linku */
+            color: #3273dc;
         }
         a:hover {
-            text-decoration: underline; /* Dodajemo podvlačenje na hover linka */
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -39,7 +41,7 @@
     <div class="container">
         <h1 class="title">404 - no need to explain!</h1>
         <p> <?= $msg ?> <br><br>
-            • Check your URL<br />
+            • Check your URI<br />
             • Check Class names<br />
             • Check again<br /><br /><br /></p>
         <h3><a href="/">Go to homepage </a></h3>
