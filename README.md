@@ -66,7 +66,9 @@ class CompanyModel
 	}
 }
 ```
+
 * To use model in your controller, use function callModel('HomeModel') at the bedining of Controller and create object
+ 
 ```
 <?php
 callModel('CompanyModel');
