@@ -1,10 +1,11 @@
+
 # Super Simple MVC PHP Script
 Simple MVC starting point for small PHP projects
 
 If you are learning or familliar with PHP and MVC architecture, this is a good starting point for smaller projects. 
 There are few things to know:
   * You can run this App from any web server that supports PHP 7.4 and higher
-  * I have uploaded examples just for View and Controller, Model will be uploaded soon
+  * I have uploaded examples for Model, View and Controller
   * Don't expect too much, it's Super Simple
 
 # Ways to run app 
@@ -18,11 +19,13 @@ There are few things to know:
   
   **app/fn.php** contains basic functions :
   
-                                  * **view()**  - rendering php page
+                                  * **view()** 	     - rendering php page
                                   
-                                  * **dd()**    - dump vars/strings/etc for debuging
+                                  * **dd()**  	     - dump vars/strings/etc for debuging
+
+                                  * **callModel()**  - loads model in Controller
                                   
-                                  * **rr()**    - redirects
+                                  * **rr()**  	     - redirects
                                   
   You can add your own functions in this file, it's included in rest of the App
   
@@ -49,4 +52,32 @@ There are few things to know:
     	}
     }
   * in browser type http://localhost:9090/company  and app wil render page Company with var $heading that you can use in your page.
+  
+  * For modeling data, create file **CompanyModel.php** create same Class with functions and some data.
+```
+<?php
+class CompanyModel
+{
+	
+	public function companies()
+	{
+		$companies = []
+		return $companies;
+	}
+}
+```
 
+* To use model in your controller, use function callModel('HomeModel') at the bedining of Controller and create object
+ 
+```
+<?php
+callModel('CompanyModel');
+Class Company extends App
+{
+   public function company()
+   {
+	$model = new CompanyModel;
+	$data = $model->companies();
+  	view('company',['data' => $data]);
+
+```
