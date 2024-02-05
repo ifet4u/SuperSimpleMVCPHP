@@ -1,1 +1,1 @@
-php -S localhost:9090 -t c:/web/vezba/public/
+php -S localhost:9090 -t C:\WEB\MVCPHP\SuperSimpleMVCPHP\public

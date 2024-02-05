@@ -1,5 +1,7 @@
 <?php
 
+callModel('HomeModel');
+
 Class Home extends App
 {
 	public function index()
@@ -7,12 +9,30 @@ Class Home extends App
 		view('main',['heading' => 'Super Simple MVC PHP']);
 	}
 
-	public function test($id)
+	public function users()
 	{
 
- 		view('test',[
- 			'heading' 	=> 'Test with ID',
- 			'id'		=> $id
+		
+
+		$vars = new HomeModel;
+
+		$users = $vars->userList();
+
+ 		view('users',[
+ 			'heading' 	=> 'User data from HomeModel',
+ 			'users'		=> $users,
+ 		]);
+	}
+		public function user($id)
+	{
+		
+		$vars = new HomeModel;
+
+		$user = $vars->userList($id);
+
+ 		view('user',[
+ 			'heading' 	=> 'User Data',
+ 			'user'		=> $user,
  		]);
 	}
 

@@ -8,7 +8,7 @@ class App
 	public function run()
 	{
 		$uri = explode('/',$_SERVER['REQUEST_URI']);
-
+		// you can change numerics of $uri array if you use app in subfolder
 		$class  = !empty($uri[1]) ? $uri[1] : 'Home';
 		$method = !empty($uri[2]) ? $uri[2] : 'index';
 		$id     = !empty($uri[3]) ? $uri[3] : null;
