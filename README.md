@@ -1,3 +1,4 @@
+
 # Super Simple MVC PHP Script
 Simple MVC starting point for small PHP projects
 
@@ -51,16 +52,29 @@ There are few things to know:
     	}
     }
   * in browser type http://localhost:9090/company  and app wil render page Company with var $heading that you can use in your page.
-
-    For modeling data, create file **CompanyModel.php** create same Class with functions and some data.
-
-   <?php
-
-
-class HomeModel
+  
+  * For modeling data, create file **CompanyModel.php** create same Class with functions and some data.
+```
+<?php
+class CompanyModel
 {
 	
-	public function companyList()
+	public function companies()
 	{
-		$data = []
+		$companies = []
+		return $companies;
+	}
+}
+```
+* To use model in your controller, use function callModel('HomeModel') at the bedining of Controller and create object
+```
+<?php
+callModel('CompanyModel');
+Class Company extends App
+{
+   public function company()
+   {
+	$model = new CompanyModel;
+	$data = $model->companies();
+  
 
