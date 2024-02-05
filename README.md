@@ -4,7 +4,7 @@ Simple MVC starting point for small PHP projects
 If you are learning or familliar with PHP and MVC architecture, this is a good starting point for smaller projects. 
 There are few things to know:
   * You can run this App from any web server that supports PHP 7.4 and higher
-  * I have uploaded examples just for View and Controller, Model will be uploaded soon
+  * I have uploaded examples for Model, View and Controller
   * Don't expect too much, it's Super Simple
 
 # Ways to run app 
@@ -21,6 +21,8 @@ There are few things to know:
                                   * **view()**  - rendering php page
                                   
                                   * **dd()**    - dump vars/strings/etc for debuging
+
+                                  * **callModel()**    - loads model in Controller
                                   
                                   * **rr()**    - redirects
                                   
@@ -49,4 +51,16 @@ There are few things to know:
     	}
     }
   * in browser type http://localhost:9090/company  and app wil render page Company with var $heading that you can use in your page.
+
+    For modeling data, create file **CompanyModel.php** create same Class with functions and some data.
+
+   <?php
+
+
+class HomeModel
+{
+	
+	public function companyList()
+	{
+		$data = []
 
