@@ -21,14 +21,14 @@ class App
 			} else {
 			    // Provera Metode
 			    view('errors/_404',[
-			    	'msg' => 'Method [ '.$method.' ] does not exists in class -'.$class
+			    	'msg' => 'Autoroute <code>/'.$class.'/'.$method.'</code> does not exists. <br>Check Controller name and Method'
 			    ]);
 			     
 			}
 		} else {
 		    // Provera klase
 		    view('errors/_404',[
-			    	'msg' => 'Class [ '.$class.' ] does not exists'
+			    	'msg' => 'Autoroute <code>/'.$class.'/'.$method.'</code> does not exists. <br>Check Controller name'
 			    ]);
 		     
 		}
