@@ -1,5 +1,5 @@
 <?php
-
+// MVC functions
 function view($url,$data = null){ // basic View Function with extracted data
 
 	extract($data);
@@ -24,4 +24,3 @@ function rr($link) // simple redirect function
 function callModel($str){
 	require_once __DIR__.'/../Model/'.$str.'.php';
 }
-// you can use this place for your own functions

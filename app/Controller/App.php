@@ -1,6 +1,7 @@
 <?php 
-require_once __DIR__.'/../Config/main.php';
+require_once __DIR__ . '/../Config/config.php';
 require_once __DIR__.'/../Config/fn.php';
+require_once __DIR__.'/../Config/Helpers/helper.php';
 
 
 class App 
