@@ -9,12 +9,13 @@ There are few things to know:
   * Classes from \Controller and \Model folders are loaded automatically
   * Don't expect too much, it's Super Simple
 
-# Ways to run app 
-  1. Copy files to web server so that '**public**' folder is root of your server. Or use virtual server 
-  2. If you are using Windows, and you have PHP installed, edit '**start.cmd**' batch file so that run path is set to 'public' folder, edit port, and run batch 
-  3. You can copy files to a subfolder of your root, edit **/app/Controller/App.php** $uri array, but it's not a good practice.
+# How to run the app 
+  1. Get all files from `https://github.com/ifet4u/SuperSimpleMVCPHP.git` or download and extract manually
+  2. Copy files to web server so that '**public**' folder is root of your server. Or use virtual server 
+  3. If you are using Windows, and you have PHP installed, edit '**start.cmd**' batch file so that run path is set to 'public' folder, edit port, and run batch 
+  4. You can copy files to a subfolder of your root, edit **/app/Controller/App.php** $uri array, but it's not a good practice.
 
-# Briefing
+# Basic
   **app/Config** is place for configuration files.
   **app/main.php** is intended to be place to define constants and other application configuration
   
@@ -28,13 +29,13 @@ There are few things to know:
                                   
   You can add your own functions in this file, it's included in rest of the App
   
-  **app/Controller** is place for Controller files. Controller name, and filename **must be the same in order to work**
+  **/app/Controller** is place for Controller files. Controller name, and filename **must be the same in order to work**
   
-  **app/Controller/App.php** is basic Controller and other Controllers are extending it. App.php cintains basic autorouting methods, and basic error handling. Feel free to edit and suggest.
+  **/app/Controller/App.php** is basic Controller and other Controllers are extending it. App.php cintains basic autorouting methods, and basic error handling. Feel free to edit and suggest.
   
-  **app/Controller/Home.php** is default controller that loads it's method **index()**
+  **/app/Controller/Home.php** is default controller that loads it's method **index()**
   
-  **app/View** is place for view files
+  **/app/View** is place for view files
 
   # Usage
    * Create new Controller wich extends App `Class Company extends App` 
