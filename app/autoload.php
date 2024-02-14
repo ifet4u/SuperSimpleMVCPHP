@@ -1,14 +1,24 @@
 <?php
 
+$directory = [ 
+	'/Controller/',
+	'/Model/'
+	];
 
-spl_autoload_register('autoLoad');
+function auto($url){
 
-function autoLoad($url){
-	$klasa = __DIR__."/Controller/$url.php";
+	global $directory;
 
-	if(!file_exists($klasa)) {
-		return false;
+	foreach($directory as $dir)
+	{
+		$class = __DIR__. $dir . $url. ".php";
+
+		if(file_exists($class)) {
+			require_once $class;
+		}
 	}
 
-	require $klasa;
 }
+
+spl_autoload_register('auto');
+

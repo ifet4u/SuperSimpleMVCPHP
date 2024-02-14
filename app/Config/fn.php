@@ -21,6 +21,4 @@ function rr($link) // simple redirect function
 	exit;
 }
 
-function callModel($str){
-	require_once __DIR__.'/../Model/'.$str.'.php';
-}
+

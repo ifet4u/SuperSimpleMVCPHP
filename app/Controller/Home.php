@@ -1,6 +1,5 @@
 <?php
 
-callModel('HomeModel');
 
 Class Home extends App
 {
@@ -12,8 +11,6 @@ Class Home extends App
 	public function users()
 	{
 
-		
-
 		$vars = new HomeModel;
 
 		$users = $vars->userList();
@@ -23,7 +20,8 @@ Class Home extends App
  			'users'		=> $users,
  		]);
 	}
-		public function user($id)
+
+	public function user($id)
 	{
 		
 		$vars = new HomeModel;
@@ -33,6 +31,19 @@ Class Home extends App
  		view('user',[
  			'heading' 	=> 'User Data',
  			'user'		=> $user,
+ 		]);
+	}
+
+	public function debug()
+	{
+		
+		$vars = new HomeModel;
+
+		$users = $vars->userList();
+
+ 		view('debug',[
+ 			'heading' 	=> 'Dump Data',
+ 			'users'		=> $users,
  		]);
 	}
 
