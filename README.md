@@ -2,10 +2,11 @@
 # Super Simple MVC PHP Script
 Simple MVC starting point for small PHP projects
 
-If you are learning or familliar with PHP and MVC architecture, this is a good starting point for smaller projects. 
+If you are learning or familliar with PHP and MVC architecture, this is a good starting point for smaller projects and practice. 
 There are few things to know:
-  * You can run this App from any web server that supports PHP 7.4 and higher
+  * You can run this App from any web server that supports PHP 8 and higher
   * I have uploaded examples for Model, View and Controller
+  * Classes from \Controller and \Model folders are loaded automatically
   * Don't expect too much, it's Super Simple
 
 # Ways to run app 
@@ -22,9 +23,7 @@ There are few things to know:
                                   * **view()** 	     - rendering php page
                                   
                                   * **dd()**  	     - dump vars/strings/etc for debuging
-
-                                  * **callModel()**  - loads model in Controller
-                                  
+                                 
                                   * **rr()**  	     - redirects
                                   
   You can add your own functions in this file, it's included in rest of the App
