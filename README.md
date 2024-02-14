@@ -66,11 +66,11 @@ class CompanyModel
 }
 ```
 
-* To use model in your controller, use function callModel('HomeModel') at the bedining of Controller and create object
+* Models are also loaded automatically
  
 ```
 <?php
-callModel('CompanyModel');
+
 Class Company extends App
 {
    public function company()
