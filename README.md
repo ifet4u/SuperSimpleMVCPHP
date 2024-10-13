@@ -1,6 +1,6 @@
 
 # Super Simple MVC PHP Script
-Simple MVC starting point for small PHP projects
+Simple MVC starting point for small PHP projects, but mostly for learning
 
 If you are learning or familliar with PHP and MVC architecture, this is a good starting point for smaller projects and practice. 
 There are few things to know:
@@ -21,7 +21,7 @@ There are few things to know:
   
   **app/fn.php** contains basic functions :
   
-                                  * **view()** 	     - rendering php page
+                                  * **view()** 	     - rendering php view
                                   
                                   * **dd()**  	     - dump vars/strings/etc for debuging
                                  
