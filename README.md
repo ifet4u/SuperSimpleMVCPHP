@@ -12,7 +12,7 @@ There are few things to know:
 # How to run the app 
   1. Get all files from `https://github.com/ifet4u/SuperSimpleMVCPHP.git` or download and extract manually
   2. Copy files to web server so that '**public**' folder is root of your server. Or use virtual server 
-  3. If you are using Windows, and you have PHP installed, edit '**start.cmd**' batch file so that run path is set to 'public' folder, edit port, and run batch 
+  3. Open CMD, type *php -S localhost:9090 -t public* If you are using Windows, and you have PHP installed, run '**start.cmd**' 
   4. You can copy files to a subfolder of your root, edit **/app/Controller/App.php** $uri array, but it's not a good practice.
 
 # Basic
