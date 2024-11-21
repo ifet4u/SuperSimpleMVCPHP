@@ -1,6 +1,6 @@
 
-# Super Simple MVC PHP Script
-Simple MVC starting point for small PHP projects, but mostly for learning
+# Super Simple MVC PHP Script - autoroute
+Simple MVC starting point for small PHP projects, but mostly for learning, only with Auto Routing !
 
 If you are learning or familliar with PHP and MVC architecture, this is a good starting point for smaller projects and practice. 
 There are few things to know:
