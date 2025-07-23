@@ -1,6 +1,6 @@
 
 # Super Simple MVC PHP Script - autoroute
-Simple MVC starting point for small PHP projects, but mostly for learning, only with Auto Routing !
+Simple MVC mostly for learning. It was my way of learning MVC paterns. 
 
 If you are learning or familliar with PHP and MVC architecture, this is a good starting point for smaller projects and practice. 
 There are few things to know:
@@ -35,6 +35,8 @@ There are few things to know:
   **/app/Controller/Home.php** is default controller that loads it's method **index()**
   
   **/app/View** is place for view files
+
+  only with Auto Routing !!!
 
   # Usage
    * Create new Controller wich extends App `Class Company extends App` 
