@@ -1,84 +1,138 @@
+# SuperSimpleMVCPHP
+<p align="center">
+<img src="https://i.ibb.co/mVp1LGqk/ss.png" alt="ss" border="0">
+</p>
+**SuperSimpleMVCPHP** is a minimalist PHP project designed to demonstrate the core principles of the **MVC (Model–View–Controller)** architecture. This project is ideal for beginners who want to understand how routing, controllers, models, and views work in a PHP environment — without the overhead of a full framework.
 
-# Super Simple MVC PHP Script - autoroute
-Simple MVC mostly for learning. It was my way of learning MVC paterns. 
+---
 
-If you are learning or familliar with PHP and MVC architecture, this is a good starting point for smaller projects and practice. 
-There are few things to know:
-  * You can run this App from any web server that supports PHP 8 and higher
-  * I have uploaded examples for Model, View and Controller
-  * Classes from \Controller and \Model folders are loaded automatically
-  * Don't expect too much, it's Super Simple
 
-# How to run the app 
-  1. Get all files from `https://github.com/ifet4u/SuperSimpleMVCPHP.git` or download and extract manually
-  2. Copy files to web server so that '**public**' folder is root of your server. Or use virtual server 
-  3. Open CMD, type `php -S localhost:9090 -t public` If you are using Windows, and you have PHP installed, run '**start.cmd**' 
+## 🎯 Purpose
 
-# Basic
-  **app/Config** is place for configuration files.
-  **app/main.php** is intended to be place to define constants and other application configuration
-  
-  **app/fn.php** contains basic functions :
-  
-                                  * **view()** 	     - rendering php view
-                                  
-                                  * **dd()**  	     - dump vars/strings/etc for debuging
-                                 
-                                  * **rr()**  	     - redirects
-                                  
-  You can add your own functions in this file, it's included in rest of the App
-  
-  **/app/Controller** is place for Controller files. Controller name, and filename **must be the same in order to work**
-  
-  **/app/Controller/App.php** is basic Controller and other Controllers are extending it. App.php cintains basic autorouting methods, and basic error handling. Feel free to edit and suggest.
-  
-  **/app/Controller/Home.php** is default controller that loads it's method **index()**
-  
-  **/app/View** is place for view files
+The main purpose of this project is to **learn and understand MVC architecture** in PHP. The code is written to be as clear and simple as possible, making it easy for newcomers to follow and experiment.
 
-  only with Auto Routing !!!
+---
 
-  # Usage
-   * Create new Controller wich extends App `Class Company extends App` 
-   * Create Method `index()` 
-   * Create file company.php insert basic HTML and 
-   * In method index() call function view() and pass as value name of created file without .php 
+## 📁 Project Structure
 
-    <?php
-    Class Company extends App
-    {
-    	public function index()
-    	{
-    		view('company',['heading' => 'This is Company ltd.']);
-    	}
-    }
-  * in browser type http://localhost:9090/company  and app wil render page Company with var $heading that you can use in your page.
-  
-  * For modeling data, create file **CompanyModel.php** create same Class with functions and some data.
 ```
-<?php
-class CompanyModel
-{
-	
-	public function companies()
-	{
-		$companies = []
-		return $companies;
-	}
+SuperSimpleMVCPHP/
+├── app/
+│   ├── controllers/
+│   ├── core/
+│   ├── models/
+│   └── views/
+├── public/
+│   └── index.php
+├── .htaccess
+└── README.md
+```
+
+- `public/index.php` – Entry point of the application (bootstrap)
+- `core/` – Core classes: App (router), Controller (base controller)
+- `controllers/` – Your controller classes (e.g., Home.php)
+- `models/` – Data access logic
+- `views/` – HTML rendering files
+
+---
+
+## 🚀 Quick Start
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/ifet4u/SuperSimpleMVCPHP.git
+```
+
+2. Start the built-in PHP server:
+
+```bash
+cd SuperSimpleMVCPHP/public
+php -S localhost:8000
+```
+
+3. Open in your browser: [http://localhost:8000](http://localhost:8000)
+
+---
+
+## 🧠 How It Works
+
+### 1. `index.php`
+
+The application's entry point. Loads the `App` class and starts routing based on the URL.
+
+### 2. `App.php`
+
+Parses the URL and dynamically calls the corresponding controller and method.
+
+Example URL:
+```
+/home/about
+```
+→ Calls the `Home` controller and its `about()` method.
+
+### 3. Controllers
+
+```php
+class Home extends Controller {
+    public function index() {
+        $this->view('home/index');
+    }
 }
 ```
 
-* Models are also loaded automatically
- 
-```
-<?php
+### 4. Views
 
-Class Company extends App
-{
-   public function company()
-   {
-	$model = new CompanyModel;
-	$data = $model->companies();
-  	view('company',['data' => $data]);
+Views are simple `.php` files that render HTML. Called from controllers like:
 
+```php
+$this->view('home/index');
 ```
+
+---
+
+## 🧪 Example: Creating a Route
+
+URL: `/home/hello/Marko`
+
+Controller method:
+```php
+public function hello($name = '') {
+    echo "Hello, $name!";
+}
+```
+
+---
+
+## 🔐 Security Note
+
+- This project is **not suitable for production** — it lacks protections like SQL injection prevention, CSRF, XSS, etc.
+- There's no session management, authentication, or templating engine — it's built to stay as minimal as possible for learning purposes.
+
+---
+
+## 🤝 Contributing
+
+If you'd like to improve this educational project:
+
+1. Fork the repository
+2. Create your branch (`git checkout -b feature/your-feature`)
+3. Submit a pull request
+
+---
+
+## 📄 License
+
+MIT License — free to use, modify, and distribute for educational purposes.
+
+---
+
+## 📬 Contact
+
+Author: [ifet4u](https://github.com/ifet4u)
+
+Feel free to reach out if you have questions, suggestions, or want to use this in your course or classroom.
+
+## 🙌 Acknowledgements
+
+The name **SuperSimpleMVCPHP** is a nod to [Super Simple Songs](https://supersimple.com/super-simple-songs), whose approach to learning — simple, clear, and effective — inspired the naming style of this project. While the content is entirely different, the philosophy of making learning easy and enjoyable is shared.
