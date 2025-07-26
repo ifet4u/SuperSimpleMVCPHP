@@ -6,7 +6,6 @@
 
 ---
 
-
 ## 🎯 Purpose
 
 The main purpose of this project is to **learn and understand MVC architecture** in PHP. The code is written to be as clear and simple as possible, making it easy for newcomers to follow and experiment.
@@ -83,11 +82,40 @@ class Home extends Controller {
 
 ### 4. Views
 
-Views are simple `.php` files that render HTML. Called from controllers like:
+Views are simple `.php` files located in the `app/views/` directory. You can pass data from the controller to the view using an associative array.
 
+#### Example: Passing variables to a view
+
+**Controller:**
 ```php
-$this->view('home/index');
+class Home extends Controller {
+    public function index() {
+        $data = [
+            'title' => 'Welcome Page',
+            'message' => 'Hello from the controller!',
+            'users' => ['Alice', 'Bob', 'Charlie']
+        ];
+
+        $this->view('home/index', $data);
+    }
+}
 ```
+
+**View (`app/views/home/index.php`):**
+```php
+<h1><?php echo $title; ?></h1>
+<p><?php echo $message; ?></p>
+
+<ul>
+<?php foreach ($users as $user): ?>
+    <li><?php echo $user; ?></li>
+<?php endforeach; ?>
+</ul>
+```
+
+The `view()` method automatically extracts the array into variables, so you can use `$title`, `$message`, or even loop through `$users` directly in your view.
+
+You can pass both **single values** and **arrays**, depending on what your view needs to display.
 
 ---
 
@@ -121,6 +149,14 @@ If you'd like to improve this educational project:
 
 ---
 
+## 🙌 Acknowledgements
+
+Special thanks to [Dave Hollingworth](https://davehollingworth.com) ([GitHub profile](https://github.com/daveh)), whose tutorials and teaching style greatly helped shape this project and made learning MVC in PHP much easier.
+
+The name **SuperSimpleMVCPHP** is a nod to [Super Simple Songs](https://supersimple.com/super-simple-songs), whose approach to learning — simple, clear, and effective — inspired the naming style of this project. While the content is entirely different, the philosophy of making learning easy and enjoyable is shared.
+
+---
+
 ## 📄 License
 
 MIT License — free to use, modify, and distribute for educational purposes.
@@ -132,9 +168,3 @@ MIT License — free to use, modify, and distribute for educational purposes.
 Author: [ifet4u](https://github.com/ifet4u)
 
 Feel free to reach out if you have questions, suggestions, or want to use this in your course or classroom.
-
-## 🙌 Acknowledgements
-
-Special thanks to [Dave Hollingworth](https://davehollingworth.com)  [Dave Hollingworth Github](https://github.com/daveh), whose tutorials and teaching style greatly helped shape this project and made learning MVC in PHP much easier.
-
-The name **SuperSimpleMVCPHP** is a nod to [Super Simple Songs](https://supersimple.com/super-simple-songs), whose approach to learning — simple, clear, and effective — inspired the naming style of this project. While the content is entirely different, the philosophy of making learning easy and enjoyable is shared.
