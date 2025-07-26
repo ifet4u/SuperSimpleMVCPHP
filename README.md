@@ -135,4 +135,6 @@ Feel free to reach out if you have questions, suggestions, or want to use this i
 
 ## 🙌 Acknowledgements
 
+Special thanks to [Dave Hollingworth](https://davehollingworth.com)  [Dave Hollingworth Github](https://github.com/daveh), whose tutorials and teaching style greatly helped shape this project and made learning MVC in PHP much easier.
+
 The name **SuperSimpleMVCPHP** is a nod to [Super Simple Songs](https://supersimple.com/super-simple-songs), whose approach to learning — simple, clear, and effective — inspired the naming style of this project. While the content is entirely different, the philosophy of making learning easy and enjoyable is shared.
