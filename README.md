@@ -1,4 +1,4 @@
-# SuperSimpleMVCPHP
+# Super Simple MVC PHP
 <p align="center">
 <img src="https://i.ibb.co/mVp1LGqk/ss.png" alt="ss" border="0">
 </p>
